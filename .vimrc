@@ -79,6 +79,9 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set title
 set titlestring=%-25.55F\ %a%r%m titlelen=70"
 
+" Copy paste between vim and everything else
+set clipboard=unnamedplus
+
 " 高亮当前行
 set cursorline
 

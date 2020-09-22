@@ -26,7 +26,7 @@ autocmd BufNew   * wincmd l
 
 " airline
 set laststatus=2
-" set noshowmode
+set noshowmode
 let g:airline_theme="molokai"
 
 " easy_align

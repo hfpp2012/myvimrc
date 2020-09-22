@@ -32,8 +32,11 @@ Plug 'mg979/vim-xtabline'
 
 " Asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'
+
 " git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 
 Plug 'dhruvasagar/vim-open-url'
 

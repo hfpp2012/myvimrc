@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'airblade/vim-rooter'
+Plug 'liuchengxu/vim-which-key'
 
 Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx', 'typescript'],

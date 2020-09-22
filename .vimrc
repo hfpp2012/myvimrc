@@ -2,6 +2,12 @@ set nocompatible
 
 set number
 
+" default updatetime 4000ms is not good for async update
+" set updatetime=100
+
+" By default timeoutlen is 1000 ms
+set timeoutlen=500
+
 " set scrolljump=5                " lines to scroll when cursor leaves screen
 set scrolloff=6                   " minimum lines to keep above and below cursor
 
@@ -79,9 +85,6 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set title
 set titlestring=%-25.55F\ %a%r%m titlelen=70"
 
-" Copy paste between vim and everything else
-set clipboard=unnamedplus
-
 " 高亮当前行
 set cursorline
 
@@ -104,6 +107,10 @@ call plug#end()
 
 if filereadable(expand("~/.vim/.vimrc.settings"))
   source ~/.vim/.vimrc.settings
+endif
+
+if filereadable(expand("~/.vim/.which-key.vim"))
+  source ~/.vim/.which-key.vim
 endif
 
 " colorscheme

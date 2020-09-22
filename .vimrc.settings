@@ -1,0 +1,158 @@
+let g:ascii = [
+\ '                                                 #####   #####',
+\ '  ####      #    #    #  ######  #    #     #   #     # #     #',
+\ ' #    #     #    #    #      #   #    #     #   #     # #     #',
+\ ' #    #     #    #    #     #    ######     #    ######  ######',
+\ ' #  # #     #    #    #    #     #    #     #         #       #',
+\ ' #   #      #    #    #   #      #    #     #   #     # #     #',
+\ '  ### #     #     ####   ######  #    #     #    #####   #####',
+\]
+
+" ---------------------------------------------
+" plugins
+" ---------------------------------------------
+"
+" NerdTree
+map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+map <leader>e :NERDTreeFind<CR>
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeWinSize=33
+let NERDTreeQuitOnOpen=0
+let NERDTreeShowHidden=1
+autocmd VimEnter * wincmd l
+autocmd BufNew   * wincmd l
+
+" airline
+set laststatus=2
+" set noshowmode
+let g:airline_theme="molokai"
+
+" easy_align
+vnoremap <silent> <Enter> :EasyAlign<cr>
+
+" jsdoc
+nmap <silent> <C-g> :call jsdoc#insert()<cr>
+let g:jsdoc_enable_es6 = 1
+let g:jsdoc_param_description_separator = "-"
+
+" indentLine
+let g:indentLine_enabled = 0
+map <leader>il :IndentLinesToggle<cr>
+
+" ack ag
+if executable('ag')
+  let g:ackprg="ag -H --nocolor --smart-case --nogroup --column --vimgrep"
+endif
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
+" Buffer explorer
+nmap <leader>n :BufExplorer<CR>
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+
+"
+" vim-xtabline
+"
+let g:xtabline_settings = get(g:, 'xtabline_settings', {})
+let g:xtabline_settings.map_prefix = '<leader>x'
+let g:xtabline_settings.tabline_modes = ['buffers', 'tabs']
+autocmd vimenter * XTabTheme slate
+autocmd bufenter * XTabTheme slate
+let g:xtabline_settings.buffers_paths = 0
+let g:xtabline_settings.current_tab_paths = 0
+let g:xtabline_settings.other_tabs_paths = 0
+
+" vim-devicons
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
+
+" glyph-palette
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
+
+"
+" startify
+"
+let g:startify_custom_header = g:ascii + startify#fortune#boxed()
+
+map <leader>o :Startify<cr>
+let g:startify_files_number = 15
+let g:startify_lists = [
+\ { 'type': 'files',     'header': ['   Files']                        },
+\ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
+\ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+\ ]
+
+let g:startify_bookmarks = [
+\ { 's': '~/.vim/.vimrc.settings' },
+\ { 'b': '~/.vim/.vimrc.bundle' },
+\ { 'v': '~/.vimrc' },
+\ { 'z': '~/.zshrc' },
+\ { 'r': '~/codes/rails365'},
+\ { 'p': '~/codes/qiuzhipro' },
+\ ]
+
+let g:startify_enable_special = 0
+
+let g:startify_custom_footer =
+\ ['', "   求知久久", '']
+
+"
+" ---------------------------------------------
+" settings
+" ---------------------------------------------
+"
+" copy paste
+vmap <C-c> "+y
+map <C-a> ggVG
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" edit
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
+" quit
+map <C-q> :q<cr>
+map <leader>q :q<cr>
+
+" tab
+noremap <C-t> :tabnew split<CR>
+
+" save
+map <leader>s :w<CR>
+cmap w!! w !sudo tee >/dev/null %
+inoremap <C-s> <ESC>:w<CR>
+nnoremap <C-s> :w<CR>
+
+"
+" 移动
+"
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" Wrapped lines goes down/up to next row, rather than next line in file.
+nnoremap j gj
+nnoremap k gk
+
+" Highlight word at cursor without changing position
+nnoremap <leader>h *<C-O>
+
+nmap <silent> ,/ :nohlsearch<CR>
+map <C-o> :1,%s/\s\+\(\%#\)\@!$//g<cr>
+map <leader>mp :set matchpairs=<cr>
+
+map <C-r> :!ruby %<cr>
+
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>

@@ -1,0 +1,53 @@
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'lambdalisue/glyph-palette.vim'
+Plug 'airblade/vim-rooter'
+
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
+  \ 'do': 'make install'
+\}
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+" Readline style insertion
+Plug 'tpope/vim-rsi'
+Plug 'junegunn/vim-easy-align'
+Plug 'jiangmiao/auto-pairs'
+Plug 'ntpeters/vim-better-whitespace'
+" %
+Plug 'tmhedberg/matchit'
+Plug 'tomtom/tcomment_vim'
+Plug 'Yggdroot/indentLine'
+Plug 'mg979/vim-visual-multi'
+Plug 'mileszs/ack.vim'
+
+" buffer
+Plug 'jlanzarotta/bufexplorer'
+Plug 'mg979/vim-xtabline'
+
+" Asynchronous build and test dispatcher
+Plug 'tpope/vim-dispatch'
+" git
+Plug 'tpope/vim-fugitive'
+
+Plug 'dhruvasagar/vim-open-url'
+
+" colorschema
+Plug 'flazz/vim-colorschemes'
+Plug 'crusoexia/vim-monokai'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'morhetz/gruvbox'
+Plug 'AlessandroYorba/Sierra'
+Plug 'joshdick/onedark.vim'
+
+" language
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+
+Plug 'sheerun/vim-polyglot'

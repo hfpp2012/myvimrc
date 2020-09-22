@@ -83,7 +83,6 @@ set titlestring=%-25.55F\ %a%r%m titlelen=70"
 set cursorline
 
 " 修改 vmirc 后自动生效
-map <leader>l :source ~/.vimrc<cr>
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " 去掉工具栏

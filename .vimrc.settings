@@ -107,6 +107,25 @@ let g:startify_custom_footer =
 
 " gv.vim
 map <leader>gv :GV<cr>
+
+" easymotion
+map <Leader> <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>hs <Plug>(easymotion-linebackward)
+
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
+
 "
 " ---------------------------------------------
 " settings
@@ -131,7 +150,7 @@ map <leader>q :q<cr>
 noremap <C-t> :tabnew split<CR>
 
 " save
-map <leader>s :w<CR>
+map <leader>se :w<CR>
 cmap w!! w !sudo tee >/dev/null %
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> :w<CR>
@@ -147,11 +166,12 @@ map <C-l> <C-W>l
 nnoremap j gj
 nnoremap k gk
 
-" Highlight word at cursor without changing position
 nnoremap <leader>h *<C-O>
-
 nmap <silent> ,/ :nohlsearch<CR>
 map <C-o> :1,%s/\s\+\(\%#\)\@!$//g<cr>
+
+map <leader>ls :source ~/.vimrc<cr>
+
 map <leader>mp :set matchpairs=<cr>
 
 map <C-r> :!ruby %<cr>

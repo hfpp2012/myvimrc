@@ -24,6 +24,7 @@ Plug 'tmhedberg/matchit'
 Plug 'tomtom/tcomment_vim'
 Plug 'Yggdroot/indentLine'
 Plug 'mg979/vim-visual-multi'
+Plug 'easymotion/vim-easymotion'
 Plug 'mileszs/ack.vim'
 
 " buffer

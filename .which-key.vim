@@ -8,11 +8,12 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 let g:which_key_map =  {}
 let g:which_key_sep = '→'
 
+let g:which_key_map['o'] = [ ':Startify', '<leader-o>start screen' ]
+
 " a is for actions
 let g:which_key_map.a = {
       \ 'name' : '+actions',
       \ 'e' : ['<c-e>',                  '<c-e>toggle nerdtree'],
-      \ 'o' : [':Startify',              '<leader-o>start screen'],
       \ 'g' : [':GV',                    'show git log'],
       \ 'i' : [':IndentLinesToggle',     'indent line toggle'],
       \ 'n' : [':set nonumber!',         'line-numbers'],
@@ -27,7 +28,6 @@ let g:which_key_map.b = {
     \ 'name' : '+buffer' ,
     \ 'd' : ['bd'        , 'delete-buffer']   ,
     \ 'f' : ['bfirst'    , 'first-buffer']    ,
-    \ 'h' : ['Startify'  , 'home-buffer']     ,
     \ 'l' : ['blast'     , 'last-buffer']     ,
     \ 'n' : ['bnext'     , 'next-buffer']     ,
     \ 'p' : ['bprevious' , 'previous-buffer'] ,

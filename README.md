@@ -13,11 +13,7 @@
 ```
 cd ~
 git clone git@github.com:hfpp2012/myvimrc.git
-cd myvimrc
 ln -s ~/myvimrc/.vimrc ~/.vimrc
-ln -s ~/myvimrc/.vimrc.bundle ~/.vim/.vimrc.bundle
-ln -s ~/myvimrc/.vimrc.settings ~/.vim/.vimrc.settings
-ln -s ~/myvimrc/.which-key.vim ~/.vim/.which-key.vim
 vim +PlugInstall
 ```
 

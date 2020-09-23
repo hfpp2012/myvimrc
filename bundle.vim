@@ -55,4 +55,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'
 
+Plug 'ap/vim-css-color'
+
 Plug 'sheerun/vim-polyglot'

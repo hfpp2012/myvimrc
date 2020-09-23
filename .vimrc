@@ -102,18 +102,18 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
 call plug#begin('~/.vim/plugged')
 
-  if filereadable(expand("~/.vim/.vimrc.bundle"))
-    source ~/.vim/.vimrc.bundle
+  if filereadable(expand("~/myvimrc/bundle.vim"))
+    source ~/myvimrc/bundle.vim
   endif
 
 call plug#end()
 
-if filereadable(expand("~/.vim/.vimrc.settings"))
-  source ~/.vim/.vimrc.settings
+if filereadable(expand("~/myvimrc/settings.vim"))
+  source ~/myvimrc/settings.vim
 endif
 
-if filereadable(expand("~/.vim/.which-key.vim"))
-  source ~/.vim/.which-key.vim
+if filereadable(expand("~/myvimrc/which-key.vim"))
+  source ~/myvimrc/which-key.vim
 endif
 
 " colorscheme

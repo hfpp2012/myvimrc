@@ -9,6 +9,8 @@
 
 先安装插件管理器 [vim-plug](https://github.com/junegunn/vim-plug)
 
+把文件 [plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim) 下载后复制到 `~/.vim/autoload` 目录即可（没有 autoload 目录可自行创建)
+
 
 ```
 cd ~

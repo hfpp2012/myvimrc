@@ -13,8 +13,6 @@ let g:ascii = [
 " ---------------------------------------------
 "
 " NerdTree
-map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-map <leader>e :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -29,11 +27,8 @@ set laststatus=2
 set noshowmode
 let g:airline_theme="molokai"
 
-" easy_align
-vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " jsdoc
-nmap <silent> <C-g> :call jsdoc#insert()<cr>
 let g:jsdoc_enable_es6 = 1
 let g:jsdoc_param_description_separator = "-"
 
@@ -50,13 +45,10 @@ cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
 " Buffer explorer
-nmap <leader>n :BufExplorer<CR>
 let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
 
-"
 " vim-xtabline
-"
 let g:xtabline_settings = get(g:, 'xtabline_settings', {})
 let g:xtabline_settings.map_prefix = '<leader>x'
 let g:xtabline_settings.tabline_modes = ['buffers', 'tabs']
@@ -77,12 +69,9 @@ augroup my-glyph-palette
   autocmd FileType nerdtree,startify call glyph_palette#apply()
 augroup END
 
-"
 " startify
-"
 let g:startify_custom_header = g:ascii + startify#fortune#boxed()
 
-map <leader>o :Startify<cr>
 let g:startify_files_number = 15
 let g:startify_lists = [
 \ { 'type': 'files',     'header': ['   Files']                        },
@@ -105,6 +94,31 @@ let g:startify_custom_footer =
 \ ['', "   求知久久", '']
 
 " easymotion
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
+"
+" ---------------------------------------------
+" key binding
+" ---------------------------------------------
+"
+" NerdTree
+map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+map <leader>e :NERDTreeFind<CR>
+
+" vim-xtabline
+map <leader>xq :XTabCloseBuffer<cr>
+map <leader>xl :XTabListBuffers<cr>
+
+" jsdoc
+nmap <silent> <C-g> :call jsdoc#insert()<cr>
+
+" easy_align
+vnoremap <silent> <Enter> :EasyAlign<cr>
+
+" startify
+map <leader>o :Startify<cr>
+
+" easymotion
 map <Leader> <Plug>(easymotion-prefix)
 nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
@@ -119,13 +133,9 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+" Buffer explorer
+nmap <leader>n :BufExplorer<CR>
 
-"
-" ---------------------------------------------
-" settings
-" ---------------------------------------------
-"
 vmap <C-c> "+y
 map <C-a> ggVG
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
@@ -136,6 +146,7 @@ map <leader>q :q<cr>
 
 noremap <C-t> :tabnew split<CR>
 
+" buffer
 noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>
 
@@ -156,4 +167,4 @@ nnoremap k gk
 nnoremap <leader>v *<C-O>
 nmap <silent> ,/ :let @/ = ""<CR>
 
-map <leader>u :source ~/.vimrc<cr>
+map <leader>u :source $MYVIMRC<cr>

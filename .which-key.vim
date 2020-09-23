@@ -10,15 +10,17 @@ let g:which_key_sep = '→'
 
 " a is for actions
 let g:which_key_map.a = {
-      \ 'name' : '+actions' ,
-      \ '0' : [':Startify'               , 'start screen'],
-      \ 'g' : [':GV'                     , 'show git log'],
-      \ 'i' : [':IndentLinesToggle'      , 'indent line toggle'],
-      \ 'n' : [':set nonumber!'          , 'line-numbers'],
-      \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
-      \ 's' : [':let @/ = ""'            , 'remove search highlight'],
-      \ 'w' : [':StripWhitespace'        , 'strip whitespace'],
+      \ 'name' : '+actions',
+      \ 'e' : ['<c-e>',                  '<c-e>toggle nerdtree'],
+      \ 'o' : [':Startify',              '<leader-o>start screen'],
+      \ 'g' : [':GV',                    'show git log'],
+      \ 'i' : [':IndentLinesToggle',     'indent line toggle'],
+      \ 'n' : [':set nonumber!',         'line-numbers'],
+      \ 'r' : [':set norelativenumber!', 'relative line nums'],
+      \ 's' : [':let @/ = ""',           '<leader-/>remove search highlight'],
+      \ 'p' : [':StripWhitespace',       'strip whitespace'],
       \ }
+
 
 " b is for buffer
 let g:which_key_map.b = {
@@ -60,8 +62,8 @@ let g:which_key_map.g = {
       \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }
 
-" T is for terminal
-let g:which_key_map.T = {
+" t is for terminal
+let g:which_key_map.t = {
       \ 'name' : '+tabline' ,
       \ 'b' : [':XTabListBuffers'         , 'list buffers'],
       \ 'd' : [':XTabCloseBuffer'         , 'close buffer'],
@@ -77,6 +79,19 @@ let g:which_key_map.T = {
       \ 'P' : [':XTabMoveBufferPrev'      , '<-buffer'],
       \ 'x' : [':XTabPinBuffer'           , 'pin buffer'],
       \ }
+
+" w is for windows
+let g:which_key_map.w = {
+      \ 'name' : '+windows',
+      \ 'v' : ['<C-W>v',              'split right'],
+      \ 's' : ['<C-W>s',              'split below'],
+      \ '=' : ['<C-W>=',              'balance window'],
+      \ 'j' : [':resize -2<CR>',      'resize -2'],
+      \ 'k' : [':resize +2<CR>',      'resize +2'],
+      \ 'h' : [':vertical resize -2', ':vertical resize -2'],
+      \ 'l' : [':vertical resize +2', ':vertical resize +2'],
+      \}
+
 
 call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>

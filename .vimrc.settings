@@ -79,8 +79,6 @@ let g:startify_bookmarks = [
 \ { 'b': '~/.vim/.vimrc.bundle' },
 \ { 'v': '~/.vimrc' },
 \ { 'z': '~/.zshrc' },
-\ { 'r': '~/codes/rails365'},
-\ { 'p': '~/codes/qiuzhipro' },
 \ ]
 
 let g:startify_enable_special = 0

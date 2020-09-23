@@ -35,15 +35,6 @@ let g:jsdoc_param_description_separator = "-"
 " indentLine
 let g:indentLine_enabled = 0
 
-" ack ag
-if executable('ag')
-  let g:ackprg="ag -H --nocolor --smart-case --nogroup --column --vimgrep"
-endif
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
-
 " Buffer explorer
 let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
@@ -126,6 +117,19 @@ nmap <Leader>f <Plug>(easymotion-overwin-f)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
+" fzf
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+map <leader>b :Buffers<CR>
+map <C-p> :Files<CR>
+nnoremap <silent> <Leader>r :Rg<CR>
+nnoremap <silent> <Leader>c :Commits<CR>
+nnoremap <silent> <Leader>p :BLines<CR>
+
 " Buffer explorer
 nmap <leader>n :BufExplorer<CR>
 
@@ -163,7 +167,7 @@ nnoremap j gj
 nnoremap k gk
 
 nnoremap <leader>v *<C-O>
-nmap <silent> ,/ :let @/ = ""<CR>
+nmap <silent> <leader>/ :let @/ = ""<CR>
 
 map <leader>u :source $MYVIMRC<cr>
 

@@ -26,6 +26,9 @@ Plug 'mg979/vim-visual-multi'
 Plug 'easymotion/vim-easymotion'
 Plug 'mileszs/ack.vim'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " buffer
 Plug 'jlanzarotta/bufexplorer'
 Plug 'mg979/vim-xtabline'
@@ -47,6 +50,8 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'morhetz/gruvbox'
 Plug 'AlessandroYorba/Sierra'
 Plug 'joshdick/onedark.vim'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " language
 Plug 'tpope/vim-rails'

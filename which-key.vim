@@ -19,6 +19,8 @@ let g:which_key_map.a = {
       \ 'e' : ['<c-e>',                  '<c-e>toggle nerdtree'],
       \ 'g' : [':GV',                    'show git log'],
       \ 'i' : [':IndentLinesToggle',     'indent line toggle'],
+      \ 'm' : [':MarkdownPreview',       'markdown preview'],
+      \ 'M' : [':MarkdownPreviewStop',   'markdown preview stop'],
       \ 'n' : [':set nonumber!',         'line-numbers'],
       \ 'r' : [':set norelativenumber!', 'relative line nums'],
       \ 's' : [':let @/ = ""',           '<leader-/>remove search highlight'],

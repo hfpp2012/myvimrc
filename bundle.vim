@@ -50,6 +50,8 @@ Plug 'morhetz/gruvbox'
 Plug 'AlessandroYorba/Sierra'
 Plug 'joshdick/onedark.vim'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 " language
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'

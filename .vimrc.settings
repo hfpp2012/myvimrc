@@ -13,8 +13,6 @@ let g:ascii = [
 " ---------------------------------------------
 "
 " NerdTree
-map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-map <leader>e :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -29,17 +27,13 @@ set laststatus=2
 set noshowmode
 let g:airline_theme="molokai"
 
-" easy_align
-vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " jsdoc
-nmap <silent> <C-g> :call jsdoc#insert()<cr>
 let g:jsdoc_enable_es6 = 1
 let g:jsdoc_param_description_separator = "-"
 
 " indentLine
 let g:indentLine_enabled = 0
-map <leader>il :IndentLinesToggle<cr>
 
 " ack ag
 if executable('ag')
@@ -51,7 +45,6 @@ cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 
 " Buffer explorer
-nmap <leader>n :BufExplorer<CR>
 let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
 
@@ -105,59 +98,60 @@ let g:startify_enable_special = 0
 let g:startify_custom_footer =
 \ ['', "   求知久久", '']
 
-" gv.vim
-map <leader>gv :GV<cr>
+" easymotion
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
+"
+" ---------------------------------------------
+" key binding
+" ---------------------------------------------
+"
+"
+" vim-xtabline
+map <leader>xq :XTabCloseBuffer<cr>
+map <leader>xl :XTabListBuffers<cr>
+
+" NerdTree
+map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+map <leader>e :NERDTreeFind<CR>
 
 " easymotion
 map <Leader> <Plug>(easymotion-prefix)
 nmap s <Plug>(easymotion-s2)
 nmap t <Plug>(easymotion-t2)
-" <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
+" Buffer explorer
+nmap <leader>n :BufExplorer<CR>
+
+" easy_align
+vnoremap <silent> <Enter> :EasyAlign<cr>
+
+" jsdoc
+nmap <silent> <C-g> :call jsdoc#insert()<cr>
+
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-map <Leader>hs <Plug>(easymotion-linebackward)
+map <Leader>h <Plug>(easymotion-linebackward)
 
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
-
-
-"
-" ---------------------------------------------
-" settings
-" ---------------------------------------------
-"
-" copy paste
 vmap <C-c> "+y
 map <C-a> ggVG
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-" edit
-map <leader>ew :e %%
-map <leader>es :sp %%
-map <leader>ev :vsp %%
-map <leader>et :tabe %%
-
-" quit
 map <C-q> :q<cr>
 map <leader>q :q<cr>
 
-" tab
 noremap <C-t> :tabnew split<CR>
 
-" save
-map <leader>se :w<CR>
+map <leader>w :w<CR>
 cmap w!! w !sudo tee >/dev/null %
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> :w<CR>
 
-"
-" 移动
-"
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -166,15 +160,10 @@ map <C-l> <C-W>l
 nnoremap j gj
 nnoremap k gk
 
-nnoremap <leader>h *<C-O>
-nmap <silent> ,/ :nohlsearch<CR>
-map <C-o> :1,%s/\s\+\(\%#\)\@!$//g<cr>
+nnoremap <leader>v *<C-O>
+nmap <silent> ,/ :let @/ = ""<CR>
 
-map <leader>ls :source ~/.vimrc<cr>
-
-map <leader>mp :set matchpairs=<cr>
-
-map <C-r> :!ruby %<cr>
+map <leader>u :source $MYVIMRC<cr>
 
 noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>

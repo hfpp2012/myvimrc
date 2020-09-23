@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'airblade/vim-rooter'
+Plug 'liuchengxu/vim-which-key'
 
 Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx', 'typescript'],
@@ -14,13 +15,11 @@ Plug 'heavenshell/vim-jsdoc', {
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-" Readline style insertion
-Plug 'tpope/vim-rsi'
 Plug 'junegunn/vim-easy-align'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
 " %
-Plug 'tmhedberg/matchit'
+Plug 'andymass/vim-matchup'
 Plug 'tomtom/tcomment_vim'
 Plug 'Yggdroot/indentLine'
 Plug 'mg979/vim-visual-multi'

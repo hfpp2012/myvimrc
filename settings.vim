@@ -89,6 +89,8 @@ let g:startify_custom_footer =
 " easymotion
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
+let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+
 "
 " ---------------------------------------------
 " key binding

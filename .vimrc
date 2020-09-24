@@ -122,10 +122,10 @@ if has("gui_running")
   set guioptions=
 else
   set nocursorline
-  set termguicolors
   set t_Co=256
 endif
 
+set termguicolors
 set background=dark
 set guifont=Monaco\ Nerd\ Font\ Mono:h11
 colorscheme monokai

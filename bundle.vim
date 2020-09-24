@@ -32,6 +32,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'mg979/vim-xtabline'
 
+Plug 'voldikss/vim-floaterm'
+
 " Asynchronous build and test dispatcher
 Plug 'tpope/vim-dispatch'
 

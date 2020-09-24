@@ -98,7 +98,7 @@ let g:which_key_map.s = {
       \ }
 
 " t is for terminal
-let g:which_key_map.t = {
+let g:which_key_map.T = {
       \ 'name' : '+tabline' ,
       \ 'b' : [':XTabListBuffers'         , 'list buffers'],
       \ 'd' : [':XTabCloseBuffer'         , 'close buffer'],
@@ -113,6 +113,18 @@ let g:which_key_map.t = {
       \ 'p' : [':tabprevious'             , 'prev tab'],
       \ 'P' : [':XTabMoveBufferPrev'      , '<-buffer'],
       \ 'x' : [':XTabPinBuffer'           , 'pin buffer'],
+      \ }
+
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ ';' : [':FloatermNew --wintype=popup'                   , 'terminal'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'lazygit'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'lazydocker'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 'b' : [':FloatermNew btm'                               , 'bottom'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
 
 " w is for windows

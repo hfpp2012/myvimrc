@@ -22,3 +22,9 @@ vim +PlugInstall
 字体：https://github.com/Karmenzind/monaco-nerd-fonts/tree/master/fonts
 
 下载后复制 ~/Library/Fonts (mac)
+
+css color 支持需要 golang
+
+* https://github.com/RRethy/vim-hexokinase/
+
+* https://golang.org/doc/install

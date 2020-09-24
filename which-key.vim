@@ -122,7 +122,7 @@ let g:which_key_map.t = {
       \ 'g' : [':FloatermNew lazygit'                           , 'lazygit'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'lazydocker'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
-      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 'p' : [':FloatermNew python3'                           , 'python3'],
       \ 'b' : [':FloatermNew btm'                               , 'bottom'],
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }

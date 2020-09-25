@@ -102,7 +102,13 @@ let g:floaterm_autoclose=1
 let g:floaterm_width=0.8
 let g:floaterm_height=0.8
 
-"
+" vim-closetag
+let g:closetag_filenames = '*.html, *.xhtml, *.phtml, *.erb'
+" let g:closetag_filetypes = 'html, xhtml, phtml'
+
+" tagalong
+let g:tagalong_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
+
 " ---------------------------------------------
 " key binding
 " ---------------------------------------------

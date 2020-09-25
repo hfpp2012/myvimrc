@@ -19,6 +19,7 @@ let g:which_key_map.a = {
       \ 'e' : ['<c-e>',                  '<c-e>toggle nerdtree'],
       \ 'g' : [':GV',                    'show git log'],
       \ 'i' : [':IndentLinesToggle',     'indent line toggle'],
+      \ 'h' : [':CloseTagToggleBuffer',  'close tag toggle'],
       \ 'c' : [':HexokinaseToggle',      'css color toggle'],
       \ 'm' : [':MarkdownPreview',       'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop',   'markdown preview stop'],

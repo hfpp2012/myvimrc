@@ -59,6 +59,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'
 
+Plug 'alvan/vim-closetag'
+Plug 'AndrewRadev/tagalong.vim'
+
 Plug 'ap/vim-css-color'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 

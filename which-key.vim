@@ -12,6 +12,7 @@ let g:which_key_map['_'] = { 'name': 'which_key_ignore' }
 let g:which_key_map['h'] = { 'name': 'which_key_ignore' }
 
 let g:which_key_map['o'] = [ ':Startify', '<leader-o>start screen' ]
+let g:which_key_map['f'] = [ ':Farr --source=rg'    , 'find & replace' ]
 
 " a is for actions
 let g:which_key_map.a = {
@@ -20,6 +21,7 @@ let g:which_key_map.a = {
       \ 'g' : [':GV',                    'show git log'],
       \ 'i' : [':IndentLinesToggle',     'indent line toggle'],
       \ 'h' : [':CloseTagToggleBuffer',  'close tag toggle'],
+      \ 'f' : [':QuickScopeToggle',      'quick scope toggle'],
       \ 'c' : [':HexokinaseToggle',      'css color toggle'],
       \ 'm' : [':MarkdownPreview',       'markdown preview'],
       \ 'M' : [':MarkdownPreviewStop',   'markdown preview stop'],

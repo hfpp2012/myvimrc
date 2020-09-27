@@ -108,6 +108,11 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
+
 if filereadable(expand("~/myvimrc/settings.vim"))
   source ~/myvimrc/settings.vim
 endif

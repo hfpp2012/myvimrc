@@ -24,6 +24,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'Yggdroot/indentLine'
 Plug 'mg979/vim-visual-multi'
 Plug 'easymotion/vim-easymotion'
+Plug 'unblevable/quick-scope'
+Plug 'brooth/far.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

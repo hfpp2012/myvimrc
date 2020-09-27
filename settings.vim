@@ -109,6 +109,13 @@ let g:closetag_filenames = '*.html, *.xhtml, *.phtml, *.erb'
 " tagalong
 let g:tagalong_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
 
+" quick-scope
+let g:qs_enable=0
+let g:qs_max_chars=80
+
+" far.vim
+let g:far#enable_undo=1
+
 " ---------------------------------------------
 " key binding
 " ---------------------------------------------
@@ -148,6 +155,10 @@ map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 
 " Buffer explorer
 nmap <leader>n :BufExplorer<CR>
@@ -157,11 +168,6 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " jsdoc
 nmap <silent> <C-g> :call jsdoc#insert()<cr>
-
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
 
 vmap <C-c> "+y
 map <C-a> ggVG

@@ -26,6 +26,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'easymotion/vim-easymotion'
 Plug 'unblevable/quick-scope'
 Plug 'brooth/far.vim'
+Plug 'machakann/vim-highlightedyank'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -63,6 +64,8 @@ Plug 'tpope/vim-endwise'
 
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/tagalong.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'ap/vim-css-color'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }

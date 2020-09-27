@@ -3,10 +3,10 @@ set nocompatible
 set number
 
 " default updatetime 4000ms is not good for async update
-" set updatetime=100
+set updatetime=300
 
 " By default timeoutlen is 1000 ms
-set timeoutlen=300
+set timeoutlen=500
 
 " set scrolljump=5                " lines to scroll when cursor leaves screen
 set scrolloff=6                   " minimum lines to keep above and below cursor
@@ -39,7 +39,7 @@ set wrap
 " 设置折叠方法
 set fdm=manual
 
-" 进入编辑模式时按tab弹出菜单
+" 进入命令编辑模式时按tab弹出菜单
 set wildmenu
 set wildmode=list:longest,full
 

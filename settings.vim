@@ -77,7 +77,7 @@ let g:startify_lists = [
 let g:startify_bookmarks = [
 \ { 's': '~/myvimrc/settings.vim' },
 \ { 'b': '~/myvimrc/bundle.vim' },
-\ { 'v': '~/.vimrc' },
+\ { 'v': '~/myvimrc/.vimrc' },
 \ { 'z': '~/.zshrc' },
 \ ]
 

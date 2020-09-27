@@ -2,6 +2,7 @@
 let g:coc_global_extensions = [
    \'coc-tsserver',
    \'coc-json',
+   \'coc-pairs',
    \]
 " Give more space for displaying messages.
 set cmdheight=1

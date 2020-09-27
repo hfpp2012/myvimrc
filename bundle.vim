@@ -16,7 +16,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
-Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
 " %
 Plug 'andymass/vim-matchup'

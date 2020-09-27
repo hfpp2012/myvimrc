@@ -6,7 +6,7 @@ set number
 " set updatetime=100
 
 " By default timeoutlen is 1000 ms
-set timeoutlen=500
+set timeoutlen=300
 
 " set scrolljump=5                " lines to scroll when cursor leaves screen
 set scrolloff=6                   " minimum lines to keep above and below cursor
@@ -71,7 +71,7 @@ set mouse=a
 set hidden
 
 " 启动的时候不显示那个援助索马里儿童的提示
-set shortmess=atI
+" set shortmess=atI
 
 " 搜索时忽略大小写
 set ignorecase

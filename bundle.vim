@@ -64,6 +64,8 @@ Plug 'tpope/vim-endwise'
 Plug 'alvan/vim-closetag'
 Plug 'AndrewRadev/tagalong.vim'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'ap/vim-css-color'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 

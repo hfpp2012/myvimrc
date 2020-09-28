@@ -16,6 +16,7 @@
 cd ~
 git clone git@github.com:hfpp2012/myvimrc.git
 ln -s ~/myvimrc/.vimrc ~/.vimrc
+ln -s ~/myvimrc/coc-settings.json ~/.vim/coc-settings.json
 vim +PlugInstall
 ```
 

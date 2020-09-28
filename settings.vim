@@ -78,6 +78,8 @@ let g:startify_bookmarks = [
 \ { 's': '~/myvimrc/settings.vim' },
 \ { 'b': '~/myvimrc/bundle.vim' },
 \ { 'v': '~/myvimrc/.vimrc' },
+\ { 'c': '~/myvimrc/coc.vim' },
+\ { 'w': '~/myvimrc/which-key.vim' },
 \ { 'z': '~/.zshrc' },
 \ ]
 

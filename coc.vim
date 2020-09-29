@@ -6,6 +6,8 @@ let g:coc_global_extensions = [
    \'coc-yank',
    \'coc-css',
    \'coc-html',
+   \'coc-emmet',
+   \'coc-marketplace',
    \]
 " Give more space for displaying messages.
 set cmdheight=1
@@ -81,3 +83,9 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " coc-yank
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+let g:coc_filetype_map = {
+		\ 'html.swig': 'html',
+		\ 'wxss': 'css',
+    \ 'eruby': 'html'
+		\ }

@@ -1,6 +1,17 @@
 {
   // coc
   "suggest.timeout": 10000,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python",
+    "java"
+  ],
   // coc-tsserver
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
@@ -12,5 +23,11 @@
     "'",
     "\"",
     "`"
-  ]
+  ],
+  // coc-emmet
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "eruby": "html"
+  }
 }

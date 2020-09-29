@@ -1,4 +1,16 @@
 {
+  // coc
+  "suggest.timeout": 10000,
+  // coc-tsserver
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  // coc-pairs
+  "pairs.enableCharacters": [
+    "(",
+    "[",
+    "{",
+    "'",
+    "\"",
+    "`"
+  ]
 }

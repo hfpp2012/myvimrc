@@ -65,7 +65,7 @@ augroup END
 "
 " startify
 "
-let g:startify_custom_header = g:ascii + startify#fortune#boxed()
+let g:startify_custom_header = g:ascii " + startify#fortune#boxed()
 
 let g:startify_files_number = 15
 let g:startify_lists = [

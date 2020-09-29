@@ -4,6 +4,8 @@ let g:coc_global_extensions = [
    \'coc-json',
    \'coc-pairs',
    \'coc-yank',
+   \'coc-css',
+   \'coc-html',
    \]
 " Give more space for displaying messages.
 set cmdheight=1
@@ -58,7 +60,7 @@ endfunction
 inoremap <silent><expr> <c-y> coc#refresh()
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)

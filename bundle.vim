@@ -66,6 +66,10 @@ Plug 'AndrewRadev/tagalong.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'honza/vim-snippets'
+
+Plug 'liuchengxu/vista.vim'
+
 Plug 'ap/vim-css-color'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 

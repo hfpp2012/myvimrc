@@ -29,5 +29,15 @@
     "vue-html": "html",
     "javascript": "javascriptreact",
     "eruby": "html"
+  },
+  // coc-snippets
+  "snippets.extends": {
+    "javascriptreact": [
+      "javascript",
+      "typescript"
+    ],
+    "typescript": [
+      "javascript"
+    ]
   }
 }

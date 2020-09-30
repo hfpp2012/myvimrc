@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
    \'coc-html',
    \'coc-emmet',
    \'coc-marketplace',
+   \'coc-snippets',
    \]
 " Give more space for displaying messages.
 set cmdheight=1
@@ -23,23 +24,6 @@ if has("patch-8.1.1564")
 else
   set signcolumn=yes
 endif
-
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -81,11 +65,26 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+
+" let g:coc_filetype_map = {
+" 		\ 'html.swig': 'html',
+" 		\ 'wxss': 'css',
+"     \ 'eruby': 'html'
+" 		\ }
+
 " coc-yank
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
-let g:coc_filetype_map = {
-		\ 'html.swig': 'html',
-		\ 'wxss': 'css',
-    \ 'eruby': 'html'
-		\ }
+" coc-snippets
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'

@@ -9,6 +9,7 @@ let g:coc_global_extensions = [
    \'coc-emmet',
    \'coc-marketplace',
    \'coc-snippets',
+   \'coc-prettier',
    \]
 " Give more space for displaying messages.
 set cmdheight=1
@@ -88,3 +89,6 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+" coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile

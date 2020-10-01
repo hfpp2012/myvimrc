@@ -13,7 +13,6 @@
     "java"
   ],
   // coc-tsserver
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   // coc-pairs
   "pairs.enableCharacters": [

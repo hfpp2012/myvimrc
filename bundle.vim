@@ -36,9 +36,6 @@ Plug 'mg979/vim-xtabline'
 
 Plug 'voldikss/vim-floaterm'
 
-" Asynchronous build and test dispatcher
-Plug 'tpope/vim-dispatch'
-
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'

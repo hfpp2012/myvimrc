@@ -69,9 +69,9 @@ let g:startify_custom_header = g:ascii " + startify#fortune#boxed()
 
 let g:startify_files_number = 15
 let g:startify_lists = [
-\ { 'type': 'files',     'header': ['   Files']                        },
-\ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
 \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+\ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
+\ { 'type': 'files',     'header': ['   Files']                        },
 \ ]
 
 let g:startify_bookmarks = [

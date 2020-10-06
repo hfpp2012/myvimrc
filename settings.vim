@@ -195,16 +195,19 @@ vmap <C-c> "+y
 map <C-a> ggVG
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
+" quit
 map <C-q> :q<cr>
 map <leader>q :q<cr>
 
 noremap <C-t> :tabnew split<CR>
 
+" save
 map <leader>w :w<CR>
 cmap w!! w !sudo tee >/dev/null %
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> :w<CR>
 
+" move
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h

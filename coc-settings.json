@@ -12,6 +12,8 @@
     "python",
     "java"
   ],
+  // coc-tsserver
+  "tsserver.enableJavascript": false,
   // coc-pairs
   "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
   // coc-emmet

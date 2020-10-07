@@ -12,17 +12,8 @@
     "python",
     "java"
   ],
-  // coc-tsserver
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   // coc-pairs
-  "pairs.enableCharacters": [
-    "(",
-    "[",
-    "{",
-    "'",
-    "\"",
-    "`"
-  ],
+  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
   // coc-emmet
   "emmet.includeLanguages": {
     "vue-html": "html",
@@ -31,12 +22,7 @@
   },
   // coc-snippets
   "snippets.extends": {
-    "javascriptreact": [
-      "javascript",
-      "typescript"
-    ],
-    "typescript": [
-      "javascript"
-    ]
+    "javascriptreact": ["javascript", "typescript"],
+    "typescript": ["javascript"]
   }
 }

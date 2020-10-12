@@ -1,4 +1,4 @@
-## 安装
+## 说明
 
 必须的软件：
 
@@ -16,6 +16,10 @@ css color 支持需要 golang
 - https://github.com/RRethy/vim-hexokinase/
 
 - https://golang.org/doc/install
+
+https://github.com/liuchengxu/vista.vim 需要 ctags 支持，里面有安装方法
+
+## 开始安装
 
 先安装插件管理器 [vim-plug](https://github.com/junegunn/vim-plug)
 

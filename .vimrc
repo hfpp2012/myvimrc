@@ -133,4 +133,5 @@ endif
 set termguicolors
 set background=dark
 set guifont=Monaco\ Nerd\ Font\ Mono:h11
-colorscheme monokai
+" colorscheme monokai
+colorscheme molokai

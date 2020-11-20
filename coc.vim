@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
    \'coc-marketplace',
    \'coc-snippets',
    \'coc-prettier',
+   \'coc-react-refactor',
    \]
 " Give more space for displaying messages.
 set cmdheight=1

@@ -86,7 +86,7 @@ let g:startify_bookmarks = [
 let g:startify_enable_special = 0
 
 let g:startify_custom_footer =
-\ ['', "   求知久久", '']
+\ ['', "   求知编程", '']
 
 " easymotion
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
@@ -158,9 +158,12 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 map <leader>b :Buffers<CR>
 map <C-p> :Files<CR>
-nnoremap <silent> <Leader>r :Rg<CR>
+" nnoremap <silent> <Leader>r :Rg<CR>
 nnoremap <silent> <Leader>c :Commits<CR>
 nnoremap <silent> <Leader>p :BLines<CR>
+
+" ruby
+map <leader>r :!ruby %<cr>
 
 " startify
 map <leader>o :Startify<cr>

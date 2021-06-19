@@ -72,3 +72,5 @@ Plug 'ap/vim-css-color'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 Plug 'sheerun/vim-polyglot'
+
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
